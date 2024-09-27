@@ -1,0 +1,23 @@
+# Aplicação Flask Contêinerizada com Docker
+
+## Passo a Passo
+
+### 1. Criando a Aplicação Flask
+- Criamos um diretório para o projeto.
+- Criamos o arquivo `app.py` com uma rota simples que retorna "Olá, Docker!".
+- Instalamos o Flask.
+
+### 2. Criando o Dockerfile
+- Utilizamos a imagem `python:3.11-slim` como base.
+- Copiamos o conteúdo do diretório para dentro do contêiner.
+- Instalamos o Flask dentro do contêiner.
+- Expomos a porta 8080 e configuramos o comando de execução.
+
+### 3. Construindo e Executando o Contêiner
+- Construímos a imagem com o comando `docker build -t flask-app .`.
+- Executamos o contêiner com `docker run -d -p 8080:8080 flask-app`.
+
+### 4. Testando
+- Acessamos `http://localhost:8080` no navegador para verificar se a aplicação está funcionando.
+
+
